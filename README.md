@@ -33,7 +33,7 @@
 
  ![pika-1](doc/images/pika-1.png)
 
->参生后的数据为一个falsk本地请求连接用于访问，自己部署falsk项目
+>参生后的数据为一个falsk本地请求连接用于访问，自己部署falsk项目，端口为8081
 
  ![pika-2](doc/images/pika-2.png)
 
