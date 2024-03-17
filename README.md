@@ -16,9 +16,9 @@
 > 项目目录
 
 ```markdown
-│  api.py                    //对外接口，项目启动器
-│  cookie.txt				 //你的账号cookie
-│  generate.py				 //发送视频生成请求
+│  api.py                //对外接口，项目启动器
+│  cookie.txt				    //你的账号cookie
+│  generate.py				  //发送视频生成请求
 │
 └─static					 //下载后的视频存储
 ```
@@ -28,8 +28,10 @@
 > 部署
 
 - 先将本项目pika下载到本地
+- 在cookie.txt填写你的账号的cookie，在
 - 到api.py的测试下发送请求
 
+ ![pika-1](doc/images/pika-1.png)
 
 
 ###  ChatGPT接口
