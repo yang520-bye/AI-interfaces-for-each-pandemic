@@ -2,8 +2,12 @@ from collections import OrderedDict
 import requests
 from requests_toolbelt.multipart.encoder import MultipartEncoder
 
-Authorization = '你的token认证'
 
+def read_auth():
+    with open('authorization.txt', 'r', encoding='utf-8') as file:
+        auth = file.read()
+    return auth
+    
 
 # 发送提示词 , 提示词，种子，文件，负面关键词，纵横比，是否开启配音
 def send_keys(prompt, seed, files, word, ap, sfx):
@@ -31,6 +35,6 @@ def send_keys(prompt, seed, files, word, ap, sfx):
     url_generate = 'https://api.pika.art/generate'
     res = requests.post(url_generate, data=multipart_data,
                         headers={'Content-Type': multipart_data.content_type,
-                                 'Authorization': Authorization
+                                 'Authorization': read_auth()
                                  })
     return res
