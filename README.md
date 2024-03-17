@@ -28,7 +28,7 @@
 > 部署
 
 - 先将本项目pika下载到本地
-- 在cookie.txt填写你的账号的cookie，在
+- 在cookie.txt填写你的账号的cookie，在authorization.txt填写token
 - 到api.py的测试下发送请求
 
  ![pika-1](doc/images/pika-1.png)
