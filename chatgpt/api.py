@@ -12,10 +12,14 @@ def read_cookie():
         cookie = file.read()
     return cookie
 
-
+def read_auth():
+    with open('authorization.txt', 'r', encoding='utf-8') as file:
+        auth = file.read()
+    return auth
+    
 
 hearders = {
-    'Authorization': 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik1UaEVOVUpHTkVNMVFURTRNMEZCTWpkQ05UZzVNRFUxUlRVd1FVSkRNRU13UmtGRVFrRXpSZyJ9.eyJodHRwczovL2FwaS5vcGVuYWkuY29tL3Byb2ZpbGUiOnsiZW1haWwiOiJwYW44MTQ5MTNAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWV9LCJodHRwczovL2FwaS5vcGVuYWkuY29tL2F1dGgiOnsicG9pZCI6Im9yZy04TWs1YU1WNkg2UnVSWW5YQUJtS3BKVU0iLCJ1c2VyX2lkIjoidXNlci1Ra2F0NXAwUnJRT1g0bnlEekV3WUpJZEUifSwiaXNzIjoiaHR0cHM6Ly9hdXRoMC5vcGVuYWkuY29tLyIsInN1YiI6Imdvb2dsZS1vYXV0aDJ8MTA2MjU1NzY5ODYxODQxMDk5Njk3IiwiYXVkIjpbImh0dHBzOi8vYXBpLm9wZW5haS5jb20vdjEiLCJodHRwczovL29wZW5haS5vcGVuYWkuYXV0aDBhcHAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTcxMDA4NDkzMiwiZXhwIjoxNzEwOTQ4OTMyLCJhenAiOiJUZEpJY2JlMTZXb1RIdE45NW55eXdoNUU0eU9vNkl0RyIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwgbW9kZWwucmVhZCBtb2RlbC5yZXF1ZXN0IG9yZ2FuaXphdGlvbi5yZWFkIG9yZ2FuaXphdGlvbi53cml0ZSBvZmZsaW5lX2FjY2VzcyJ9.1YafjdyGcncFp4pDCF7ixj5RYequllWCaIjZvX9B7A1Z6C4li0yrD3ML1fjPMCp5wg31Pj__CgytDGmUCKeMCg33hHX9CYm_t-jt0hSvppkpM9jl9FUMFwiKWAOX27e_E03Fc3QgvcunHSqhEXASfBkyX9uTFYFKJjPtzST0QkX15Jh65wKw0KP-qAL7NT_LLKJbhIXmyvNyLZ9SuhBdT0EWsWIyFE-7HYnv-LN4R-DLieGuHb0rYYCp6lA6bqrtH9N-AcQdzgBRxMWYoWbMZXjBtnOyJb6xnYz-_RYnCWUiQj1a2JgPlHrxf7h9U-ww0K4E64AEw4g3l9TmSLJXbg',
+    'Authorization': read_auth(),
     'Cookie': read_cookie() ,
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
     "Content-Type": "application/json"
